@@ -15,7 +15,6 @@ h1, strong {
 }
 
 a {
-  text-decoration: none;
   color: var(--main-color);
 }
 
@@ -77,3 +76,6 @@ main {
   padding: 16px;
 }
 
+#experience > h3 {
+  display: inline;
+}
