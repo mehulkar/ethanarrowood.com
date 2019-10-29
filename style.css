@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 :root {
-  --main-color: rgb(40, 147, 193);
+  --main-color: #195D7B;
+  --nav-color: #2BA1D4;
   font-family: 'Open Sans';
 }
 
@@ -79,6 +80,7 @@ nav {
   display: block;
   padding: 16px;
   text-decoration: none;
+  color: var(--nav-color);
 }
 
 @media (max-width:410px) {
@@ -94,6 +96,6 @@ nav {
   }
 }
 
-#experience > h3 {
+#education h4, #experience > h3 {
   display: inline;
 }
