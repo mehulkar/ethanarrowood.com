@@ -60,43 +60,44 @@ main {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-nav {
-  background-color: #111;
-  margin: 0;
-  padding: 0;
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.photo-grid > div {
+  margin-top: 10px;
+  width: 30%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.photo-grid > div > img {
+  width: 100%;
+}
+.photo-grid > div > div {
+  padding-left: 10px;
 }
 
-.nav-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+table {
+  border-spacing: 0;
 }
 
-.nav-list > li {
-  float: left;
+th {
+  text-align: left;
 }
 
-.nav-list > li > a {
-  display: block;
-  padding: 16px;
-  text-decoration: none;
-  color: var(--nav-color);
-}
-
-@media (max-width:410px) {
-  .nav-list {
-    padding: 16px;
-  }
-  .nav-list > li {
-    float: none;
-    text-align: left;
-  }
-  .nav-list > li > a {
-    padding: 8px;
-  }
+th, td {
+  border-bottom: 1px solid var(--main-color);
+  padding: 10px;
 }
 
 #education h4, #experience > h3 {
   display: inline;
+}
+
+@media (max-width:414px) {
+  .photo-grid > div {
+    width: 100%;
+  }
 }

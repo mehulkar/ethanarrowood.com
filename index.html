@@ -9,21 +9,86 @@
   <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
+
   <header>
     <h1>Ethan Arrowood</h1>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <img src="assets/headshot.jpg" height="200" alt="Headshot of Ethan Arrowood"/>
-    <small>Photo by <a href="http://alexarrowood.com/">Alex Arrowood Photography</a></small>
     <p><i>Pronouns: He, Him, His</i></p>
   </header>
+
   <main>
+    <section id="events">
+      <h2>Events</h2>
+      <p>Occasionally I participate in things like meetups, conferences, workshops, and livestreams.</p>
+      <p>If you want me to speak at your event please send me an email at <a href="mailto:ethan@arrowood.dev">ethan@arrowood.dev</a></p>
+      <table>
+        <tbody>
+          <tr>
+            <td colspan="4">2021</td>
+          </tr>
+          <tr>
+            <td>January</td>
+            <td>26th</td>
+            <td>HarperDB Livestream</td>
+            <td><a href="https://harperdb.io/build-a-rest-api-with-fastify-harperdb/">Build a REST API using Fastify with HarperDB</a></td>
+          </tr>
+          <tr>
+            <td>February</td>
+            <td>19th</td>
+            <td>Node Congress</td>
+            <td><a href="https://nodecongress.com/">Safely Handling Dynamic Data with TypeScript</a></td>
+          </tr>
+          <tr>
+            <td>March</td>
+            <td>24th - 26th</td>
+            <td>CityJS London</td>
+            <td><a href="https://cityjsconf.org/workshops">Diving into TypeScript - an Intermediate TypeScript Workshop</a></td>
+          </tr>
+
+          <tr>
+            <td colspan="4">2020</td>
+          </tr>
+          <tr>
+            <td>June</td>
+            <td>24th</td>
+            <td>OpenJS World</td>
+            <td><a href="https://www.youtube.com/watch?v=WjJdJkkriyE">Applying Advanced TypeScript Definition Patterns</a></td>
+          </tr>
+          <tr>
+            <td>October</td>
+            <td>22nd</td>
+            <td>Prisma TypeScript Berlin Meetup</td>
+            <td><a href="https://www.youtube.com/watch?v=JKIOMaL8Ets">Advanced TypeScript Definition Patterns with Fastify</a></td>
+          </tr>
+
+          <tr>
+            <td colspan="4">2019</td>
+          </tr>
+          <tr>
+            <td>December</td>
+            <td>18th</td>
+            <td>NodeJS Interactive</td>
+            <td><a href="https://www.youtube.com/watch?v=mQUjrstuUgE">Why You Should Maintain Type Definitions for Your JavaScript Project</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Check out my GitHub (<a href="https://github.com/ethan-arrowood/">@Ethan-Arrowood</a>)</p>
+      <div class="project-grid">
+        <div>
+          <h3><a href="https://github.com/fastify/fastify">fastify</a> - <small>Fast and low overhead web framework, for Node.js</small></h3>
+        </div>
+        <div>
+          <h3><a href="https://github.com/nodejs/undici">undici</a> - <small>An HTTP/1.1 client, written from scratch for Node.js</small></h3>
+        </div>
+        <div>
+          <h3><a href="https://github.com/ethan-arrowood/undici-fetch">undici-fetch</a> - <small>A WHATWG Fetch implementation based on @nodejs/undici</small></h3>
+        </div>
+      </div>
+    </section>
+
     <section id="education">
       <h2>Education</h2>
       <h3>Wentworth Institute of Technology</h3>
@@ -56,10 +121,7 @@
         </li>
       </ul>
     </section>
-    <section class="img-section">
-      <img src="assets/matterhorn_scenic.jpg" alt=""/>
-      <p><i>View of the Matterhorn - Zermatt, Switzerland - September 2019</i></p>
-    </section>
+
     <section id="experience">
       <h2>Experience</h2>
       <h3>Microsoft</h3>
@@ -149,32 +211,51 @@
           </ul>
         </li>
       </ul>
-      
     </section>
-    <section class="img-section">
-        <img src="assets/yosemite.jpg" alt=""/>
-        <p><i>Tunnel View Perspective - Yosemite National Park, California, USA - August 2019</i></p>
-      </section>
-    <section id="projects">
-      <h2>Projects</h2>
-      <p><i>Coming Soon!</i> - For now, check out my GitHub (<a href="https://github.com/ethan-arrowood/">@Ethan-Arrowood</a>)</p>
+
+    <section id="photo-gallery">
+      <h2>Photo Gallery</h2>
+      <div class="photo-grid">
+        <div>
+          <img src="assets/matterhorn_scenic.jpg" alt=""/>
+          <div>
+            <p><i>View of the Matterhorn</i></p>
+            <p>Zermatt, Switzerland</p>
+            <p><small>September 2019</small></p>
+          </div>
+        </div>
+        <div>
+          <img src="assets/yosemite.jpg" alt=""/>
+          <div>
+            <p><i>Tunnel View Perspective</i></p>
+            <p>Yosemite National Park, California, USA</p>
+            <p><small>August 2019</small></p>
+          </div>
+        </div>
+        <div>
+          <img src="assets/innsbruck_ridge.jpg" alt=""/>
+          <div>
+            <p><i>View of Nordkette Klettersteig and Kemacher Peak</i></p>
+            <p>Innsbruck, Austria</p>
+            <p><small>September 2019</small></p>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="img-section">
-        <img src="assets/innsbruck_ridge.jpg" alt=""/>
-        <p><i>View of Nordkette Klettersteig and Kemacher Peak - Innsbruck, Austria - September 2019</i></p>
-      </section>
+
     <section id="contact">
       <h2>Contact</h2>
-      <p>Messages are always welcome at <a href="mailto:ethan.arrowood@gmail.com">ethan.arrowood@gmail.com</a>. Other ways to get in contact is through social media such as Twitter (<a href="https://twitter.com/ArrowoodTech">@ArrowoodTech</a>) and LinkedIn (<a href="https://www.linkedin.com/in/ethan-arrowood-6ba88611b/">ethan-arrowood</a>).</p>
+      <p>Messages are always welcome at <a href="mailto:ethan@arrowood.dev">ethan@arrowood.dev</a>. Other ways to get in contact is through social media such as Twitter (<a href="https://twitter.com/ArrowoodTech">@ArrowoodTech</a>) and LinkedIn (<a href="https://www.linkedin.com/in/ethan-arrowood-6ba88611b/">ethan-arrowood</a>).</p>
       <p>I work asynchronously. This means my schedule is dynamic and I may not respond right away or during <i>normal</i> working hours. Thus, I do not expect you to read or respond to my messages outside of your own schedule either.</p>
     </section>
-    <section>
+
+    <section id="footer">
       <hr>
       <small>All images are my own and should not be used without explicit permission from myself.</small>
       <br>
       <small>This website strives to be 100% accessible. If anything is out-of-place please notify me so I can fix it.</small>
       <br>
-      <small>Copyright 2019 Ethan Arrowood</small>
+      <small>Copyright 2021 Ethan Arrowood</small>
     </section>
   </main>
 </body>
