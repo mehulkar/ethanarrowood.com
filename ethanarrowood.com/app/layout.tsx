@@ -1,4 +1,7 @@
 import './globals.css'
+import Navbar from './navbar';
+import Providers from './providers';
+import Footer from './footer';
 
 export default function RootLayout({
   children,
@@ -6,13 +9,23 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='bg-gray-300'>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <Providers>
+          <div className="mx-auto max-w-screen-md px-2">
+            <Navbar />
+            <div className="py-8">
+              {children}
+            </div>
+            <Footer />
+          </div>
+        </Providers>
+      </body>
     </html>
   )
 }
