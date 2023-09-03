@@ -17,9 +17,9 @@ export default function RootLayout({
       <head />
       <body>
         <Providers>
-          <div className="mx-auto max-w-screen-md px-2">
+          <div className="mx-auto max-w-screen-md h-screen flex flex-col px-2">
             <Navbar />
-            <div className="py-8">
+            <div className="mb-auto py-8">
               {children}
             </div>
             <Footer />
