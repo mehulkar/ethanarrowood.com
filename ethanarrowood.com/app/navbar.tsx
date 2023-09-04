@@ -10,7 +10,7 @@ export default function Navbar () {
     const routes = [
         {
             text: "home",
-            href: "/_"
+            href: "/"
         },
         {
             text: "work",
@@ -23,7 +23,7 @@ export default function Navbar () {
                 <div className="flex flex-1">
                     <div className="flex gap-x-8">
                         {routes.map(route => {
-                            const isActive = pathname?.startsWith(route.href) ?? false;
+                            const isActive = pathname === route.href ?? false;
                             return (<Link
                                 key={route.href}
                                 href={route.href}
