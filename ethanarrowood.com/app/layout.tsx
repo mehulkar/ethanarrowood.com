@@ -1,15 +1,16 @@
-import './globals.css'
-import Navbar from './navbar';
-import Providers from './providers';
-import Footer from './footer';
+import "./globals.css";
+import Navbar from "./navbar";
+import Providers from "./providers";
+import Footer from "./footer";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className='bg-gray-200'>
+    <html lang="en" className="bg-gray-200">
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
@@ -19,13 +20,12 @@ export default function RootLayout({
         <Providers>
           <div className="mx-auto max-w-screen-md h-screen flex flex-col px-2">
             <Navbar />
-            <div className="mb-auto py-8">
-              {children}
-            </div>
+            <div className="mb-auto py-8">{children}</div>
             <Footer />
           </div>
         </Providers>
+        <Analytics/>
       </body>
     </html>
-  )
+  );
 }

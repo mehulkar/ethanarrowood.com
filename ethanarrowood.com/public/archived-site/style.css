@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 :root {
-  --main-color: #195D7B;
-  --nav-color: #2BA1D4;
-  font-family: 'Open Sans';
+  --main-color: #195d7b;
+  --nav-color: #2ba1d4;
+  font-family: "Open Sans";
 }
 
 body {
@@ -12,7 +12,8 @@ body {
   max-width: 1000px;
 }
 
-h1, strong {
+h1,
+strong {
   color: var(--main-color);
 }
 
@@ -87,16 +88,18 @@ th {
   text-align: left;
 }
 
-th, td {
+th,
+td {
   border-bottom: 1px solid var(--main-color);
   padding: 10px;
 }
 
-#education h4, #experience > h3 {
+#education h4,
+#experience > h3 {
   display: inline;
 }
 
-@media (max-width:414px) {
+@media (max-width: 414px) {
   .photo-grid > div {
     width: 100%;
   }

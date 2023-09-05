@@ -1,12 +1,10 @@
-'use client';
+"use client";
 
-import { PropsWithChildren } from 'react';
-import { Provider as ReactWrapBalancerProvider } from 'react-wrap-balancer';
+import { PropsWithChildren } from "react";
+import { Provider as ReactWrapBalancerProvider } from "react-wrap-balancer";
 
-export default function Providers({ children }: PropsWithChildren): JSX.Element {
-    return (
-        <ReactWrapBalancerProvider>
-            {children}
-        </ReactWrapBalancerProvider>
-    )
+export default function Providers({
+  children,
+}: PropsWithChildren): JSX.Element {
+  return <ReactWrapBalancerProvider>{children}</ReactWrapBalancerProvider>;
 }
