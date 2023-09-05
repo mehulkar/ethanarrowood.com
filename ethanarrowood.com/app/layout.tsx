@@ -2,7 +2,7 @@ import "./globals.css";
 import Navbar from "./navbar";
 import Providers from "./providers";
 import Footer from "./footer";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from './components/Analytics';
 
 export default function RootLayout({
   children,

@@ -19,6 +19,7 @@ const rgbDataURL = (r: number, g: number, b: number) =>
   }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
 
 interface Experience {
+  name: string;
   logo: {
     src: StaticImageData;
     alt: string;
