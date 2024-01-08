@@ -61,8 +61,8 @@ export default async function Index() {
             </div>
           </div>
         </div>
-        <hr className="border border-emerald-700" />
         <div className="block w-full flex flex-col gap-2">
+          <hr className="border border-emerald-700" />
           <div className="flex flex-row gap-2">
             <p className="text-xl inline">🎤</p>
             <ul className="text-xl">
@@ -82,9 +82,9 @@ export default async function Index() {
           <div className="flex flex-row gap-2 justify-center">
             <p className="text-xl inline">📚</p>
             <ul className="text-xl">
-              <li>A Day of Fallen Night - Samantha Shannon</li>
-              <li>The Woman Who Smashed Codes - Jason Fagone</li>
-              <li>How to Win at Chess - Levy Rozman</li>
+              <li><Link href="https://www.goodreads.com/book/show/60766189-a-day-of-fallen-night"><span className="underline">A Day of Fallen Night</span> - Samantha Shannon</Link></li>
+              <li><Link href="https://www.goodreads.com/book/show/32025298-the-woman-who-smashed-codes"><span className="underline">The Woman Who Smashed Codes</span> - Jason Fagone</Link></li>
+              <li><Link href="https://www.goodreads.com/book/show/125107160-how-to-win-at-chess"><span className="underline">How to Win at Chess</span> - Levy Rozman</Link></li>
             </ul>
           </div>
           <div className="flex flex-row justify-around">

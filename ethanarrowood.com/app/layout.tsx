@@ -22,7 +22,7 @@ export default function RootLayout({
         <Providers>
           <div className="mx-auto max-w-screen-md h-screen flex flex-col px-2">
             <Navbar />
-            <div className="mb-auto py-8">{children}</div>
+            <div className="mb-auto pt-8">{children}</div>
             <Footer />
           </div>
         </Providers>
