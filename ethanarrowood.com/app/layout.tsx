@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className="bg-gray-200">
       <body>
         <Providers>
-          <div className="mx-auto max-w-screen-md h-screen flex flex-col px-2">
+          <div className="mx-auto max-w-screen-lg h-screen flex flex-col px-2">
             <Navbar />
             <div className="mb-auto pt-8">{children}</div>
             <Footer />

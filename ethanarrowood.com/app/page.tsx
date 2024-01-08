@@ -24,7 +24,7 @@ export default async function Index() {
         <span className="float-right text-emerald-700">━━━━━━</span>
       </div>
       <div className="block w-full flex flex-col gap-4">
-        <div className="block w-full flex flex-row gap-4">
+        <div className="block w-full flex flex-col sm:flex-row gap-4">
           <Image
             src={"/images/node_conf_eu.jpg"}
             alt="Picture of me giving a talk at Node Conf EU"
@@ -34,22 +34,16 @@ export default async function Index() {
             width={1192}
             height={1364}
           />
-          {/* <p className="text-xl">Currently Listening to:</p>
-          <div className="flex flex-row gap-2">
-            <p className="text-xl inline">🎧</p>
-            <ul className="text-xl">
-              <li>Spotify</li>
-            </ul>
-          </div> */}
           <div className="flex flex-col w-full sm:w-2/3">
             <div className="block flex flex-row gap-2">
               <p className="text-xl inline">💻</p>
               <ul className="text-xl">
-                <li>Vercel Senior Software Engineer</li>
-                <li>Node.js Contributor</li>
-                <li>Undici Maintainer</li>
-                <li>ECMA TC39 Delegate</li>
-                <li>OpenJS & WinterCG Collaborator</li>
+                <li><Link className="underline" href="https://vercel.com">Vercel</Link> Senior Software Engineer</li>
+                <li><Link className="underline" href="https://nodejs.org">Node.js</Link> Contributor</li>
+                <li><Link className="underline" href="https://github.com/nodejs/undici/">Undici</Link> Maintainer</li>
+                <li><Link className="underline" href="https://tc39.es">ECMA TC39</Link> Delegate</li>
+                <li><Link className="underline" href="https://openjsf.org">OpenJS</Link> & <Link className="underline" href="https://wintercg.org">WinterCG</Link> Collaborator</li>
+                <li>Developing <Link className="underline" href="https://github.com/Ethan-Arrowood/mddl">MDDL</Link>, markdown documentation language</li>
               </ul>
             </div>
             <div className="flex flex-row gap-2">
@@ -66,16 +60,16 @@ export default async function Index() {
           <div className="flex flex-row gap-2">
             <p className="text-xl inline">🎤</p>
             <ul className="text-xl">
-              <li>OpenJS World 2023 - <Link href="https://youtu.be/fih5Yt3UiNg">Advancing Web Runtime Interoperability with WinterCG: Empowering the Future of the Web</Link></li>
-              <li>NodeConf EU 2022 - <Link href="https://youtu.be/Koy8XkDSf30">Making Fetch Happen</Link></li>
-              <li>OpenJS World 2022 - <Link href="https://youtu.be/0hker18pjbM">Making Fetch Happen</Link></li>
-              <li>Node Congress 2022 - <Link href="https://youtu.be/mQ0y3IUMjys">Safely Handling Dynamic Data with TypeScript</Link></li>
-              <li>NodeTLV 2021 - <Link href="https://youtu.be/JDXphHBglQU">Making Fetch Happen</Link></li>
-              <li>OpenJS World 2021 - <Link href="https://youtu.be/y5W3Fm9dpZE">Safely Handling Dynamic Data with TypeScript</Link></li>
-              <li>TypeScript Berlin 2021 - <Link href="https://youtu.be/JKIOMaL8Ets">Advanced TypeScript Definition Patterns with Fastify</Link></li>
-              <li>OpenJS World 2020 - <Link href="https://youtu.be/WjJdJkkriyE">Applying Advanced TypeScript Definition Patterns</Link></li>
-              <li>Node.js Interactive 2019 - <Link href="https://youtu.be/mQUjrstuUgE">Why You Should Maintain Type Definitions for Your JavaScript Project</Link></li>
-              <li>React NYC 2019 - <Link href="https://youtu.be/iOTFnHJvTVw">Contributing to Open Source</Link></li>
+              <li className="line-clamp-1">OpenJS World 2023 - <Link href="https://youtu.be/fih5Yt3UiNg">Advancing Web Runtime Interoperability with WinterCG: Empowering the Future of the Web</Link></li>
+              <li className="line-clamp-1">NodeConf EU 2022 - <Link href="https://youtu.be/Koy8XkDSf30">Making Fetch Happen</Link></li>
+              <li className="line-clamp-1">OpenJS World 2022 - <Link href="https://youtu.be/0hker18pjbM">Making Fetch Happen</Link></li>
+              <li className="line-clamp-1">Node Congress 2022 - <Link href="https://youtu.be/mQ0y3IUMjys">Safely Handling Dynamic Data with TypeScript</Link></li>
+              <li className="line-clamp-1">NodeTLV 2021 - <Link href="https://youtu.be/JDXphHBglQU">Making Fetch Happen</Link></li>
+              <li className="line-clamp-1">OpenJS World 2021 - <Link href="https://youtu.be/y5W3Fm9dpZE">Safely Handling Dynamic Data with TypeScript</Link></li>
+              <li className="line-clamp-1">TypeScript Berlin 2021 - <Link href="https://youtu.be/JKIOMaL8Ets">Advanced TypeScript Definition Patterns with Fastify</Link></li>
+              <li className="line-clamp-1">OpenJS World 2020 - <Link href="https://youtu.be/WjJdJkkriyE">Applying Advanced TypeScript Definition Patterns</Link></li>
+              <li className="line-clamp-1">Node.js Interactive 2019 - <Link href="https://youtu.be/mQUjrstuUgE">Why You Should Maintain Type Definitions for Your JavaScript Project</Link></li>
+              <li className="line-clamp-1">React NYC 2019 - <Link href="https://youtu.be/iOTFnHJvTVw">Contributing to Open Source</Link></li>
             </ul>
           </div>
           <hr className="border border-emerald-700" />
