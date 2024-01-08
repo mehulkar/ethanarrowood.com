@@ -1,64 +1,118 @@
 import Link from "next/link";
 import Image from "next/image";
-import headshot from "./node_conf_eu.jpg";
+import { rgbDataURL } from "./util/rgbDataURL";
 
-const keyStr =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+async function getChessStats () {
+  const res = await fetch('https://api.chess.com/pub/player/ethanarrowood/stats');
 
-const triplet = (e1: number, e2: number, e3: number) =>
-  keyStr.charAt(e1 >> 2) +
-  keyStr.charAt(((e1 & 3) << 4) | (e2 >> 4)) +
-  keyStr.charAt(((e2 & 15) << 2) | (e3 >> 6)) +
-  keyStr.charAt(e3 & 63);
+  if (!res.ok) {
+    return null;
+  }
 
-const rgbDataURL = (r: number, g: number, b: number) =>
-  `data:image/gif;base64,R0lGODlhAQABAPAA${
-    triplet(0, r, g) + triplet(b, 255, 255)
-  }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
+  return res.json();
+}
 
 export default async function Index() {
+  const chessStats = await getChessStats();
+
   return (
     <>
-      <div className="block pb-2 w-full text-lg">
-        Hello, I&apos;m{" "}
+      <div className="block pb-4 w-full text-lg">
+        👋 I&apos;m{" "}
         <h1 className="inline text-2xl text-emerald-800">Ethan Arrowood</h1>
+        , here are my highlights...
         <span className="float-right text-emerald-700">━━━━━━</span>
       </div>
-      <Image
-        src={headshot}
-        alt="Picture of me giving a talk at Node Conf EU"
-        className="rounded-xl float-left mt-1.5 mr-4 w-2/5"
-        placeholder="blur"
-        blurDataURL={rgbDataURL(129, 133, 137)}
-      />
-      <p className="text-lg pb-2">
-        I&apos;m currently a full-time, senior software engineer for{" "}
-        <Link className="underline" href="https://vercel.com">
-          Vercel
-        </Link>
-        . I work on a variety of projects, most notably maintaining the Vercel
-        CLI. I am an active contributor to Node.js, and an active member of the
-        WinterCG and the OpenJS Foundation leading initiatives to improve the
-        interoperability of JavaScript runtime environments. Occasionally, I
-        professionally speak about my open source work at various international
-        conferences such as{" "}
-        <Link className="underline" href="https://youtu.be/fih5Yt3UiNg">
-          OpenJS World
-        </Link>{" "}
-        and{" "}
-        <Link className="underline" href="https://youtu.be/Koy8XkDSf30">
-          NodeConfEU
-        </Link>
-        .<br></br>
-        <br></br>During the winter months, I am a part-time professional ski
-        instructor for Vail Resorts. I have complete my PSIA Alpine Level 1 and
-        Freestyle Level 1 certifications.{" "}
-        <i>
-          I&apos;m available for private bookings throughout the ski season at
-          Breckenridge Resort.
-        </i>
-      </p>
-      <hr className="border border-emerald-700" />
+      <div className="block w-full flex flex-col gap-4">
+        <div className="block w-full flex flex-row gap-4">
+          <Image
+            src={"/images/node_conf_eu.jpg"}
+            alt="Picture of me giving a talk at Node Conf EU"
+            className="rounded-xl w-2/3 m-auto sm:w-1/3 sm:m-0"
+            placeholder="blur"
+            blurDataURL={rgbDataURL(129, 133, 137)}
+            width={1192}
+            height={1364}
+          />
+          {/* <p className="text-xl">Currently Listening to:</p>
+          <div className="flex flex-row gap-2">
+            <p className="text-xl inline">🎧</p>
+            <ul className="text-xl">
+              <li>Spotify</li>
+            </ul>
+          </div> */}
+          <div className="flex flex-col w-full sm:w-2/3">
+            <div className="block flex flex-row gap-2">
+              <p className="text-xl inline">💻</p>
+              <ul className="text-xl">
+                <li>Vercel Senior Software Engineer</li>
+                <li>Node.js Contributor</li>
+                <li>Undici Maintainer</li>
+                <li>ECMA TC39 Delegate</li>
+                <li>OpenJS & WinterCG Collaborator</li>
+              </ul>
+            </div>
+            <div className="flex flex-row gap-2">
+              <p className="text-xl inline">🎿</p>
+              <ul className="text-xl">
+                <li>Breckenridge Ski Instructor</li>
+                <li>PSIA Alpine 1 & Freestyle 1 Certified</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr className="border border-emerald-700" />
+        <div className="block w-full flex flex-col gap-2">
+          <div className="flex flex-row gap-2">
+            <p className="text-xl inline">🎤</p>
+            <ul className="text-xl">
+              <li>OpenJS World 2023 - <Link href="https://youtu.be/fih5Yt3UiNg">Advancing Web Runtime Interoperability with WinterCG: Empowering the Future of the Web</Link></li>
+              <li>NodeConf EU 2022 - <Link href="https://youtu.be/Koy8XkDSf30">Making Fetch Happen</Link></li>
+              <li>OpenJS World 2022 - <Link href="https://youtu.be/0hker18pjbM">Making Fetch Happen</Link></li>
+              <li>Node Congress 2022 - <Link href="https://youtu.be/mQ0y3IUMjys">Safely Handling Dynamic Data with TypeScript</Link></li>
+              <li>NodeTLV 2021 - <Link href="https://youtu.be/JDXphHBglQU">Making Fetch Happen</Link></li>
+              <li>OpenJS World 2021 - <Link href="https://youtu.be/y5W3Fm9dpZE">Safely Handling Dynamic Data with TypeScript</Link></li>
+              <li>TypeScript Berlin 2021 - <Link href="https://youtu.be/JKIOMaL8Ets">Advanced TypeScript Definition Patterns with Fastify</Link></li>
+              <li>OpenJS World 2020 - <Link href="https://youtu.be/WjJdJkkriyE">Applying Advanced TypeScript Definition Patterns</Link></li>
+              <li>Node.js Interactive 2019 - <Link href="https://youtu.be/mQUjrstuUgE">Why You Should Maintain Type Definitions for Your JavaScript Project</Link></li>
+              <li>React NYC 2019 - <Link href="https://youtu.be/iOTFnHJvTVw">Contributing to Open Source</Link></li>
+            </ul>
+          </div>
+          <hr className="border border-emerald-700" />
+          <div className="flex flex-row gap-2 justify-center">
+            <p className="text-xl inline">📚</p>
+            <ul className="text-xl">
+              <li>A Day of Fallen Night - Samantha Shannon</li>
+              <li>The Woman Who Smashed Codes - Jason Fagone</li>
+              <li>How to Win at Chess - Levy Rozman</li>
+            </ul>
+          </div>
+          <div className="flex flex-row justify-around">
+            <div className="flex flex-row gap-2">
+              <p className="text-xl inline">♟️</p>
+              <ul className="text-xl">
+                <li><Link className="underline" href="https://www.chess.com/member/ethanarrowood">chess.com/ethanarrowood</Link></li>
+                {
+                  <>
+                    <li>Rapid: {chessStats?.chess_rapid.last.rating ?? "~1200"}</li>
+                    <li>Blitz: {chessStats?.chess_blitz.last.rating ?? "~700"}</li>
+                    <li>Daily: {chessStats?.chess_daily.last.rating ?? "~900"}</li>
+                  </>
+                }
+              </ul>
+            </div>
+            <div className="flex flex-row gap-2">
+              <p className="text-xl inline">🏋️‍♂️</p>
+              <ul className="text-xl">
+                <li>Deadlift: 315lbs</li>
+                <li>Back Squat: 215lbs</li>
+                <li>Push Press: 125lbs</li>
+                <li>Power Clean: 125lbs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
