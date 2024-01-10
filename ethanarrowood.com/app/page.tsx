@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { rgbDataURL } from "./util/rgbDataURL";
+import talks from './talks/talks.json';
+import { YouTubeEmbed } from "./components/YouTubeEmbed";
 
 async function getChessStats () {
   const res = await fetch('https://api.chess.com/pub/player/ethanarrowood/stats');
@@ -57,20 +59,15 @@ export default async function Index() {
         </div>
         <div className="block w-full flex flex-col gap-2">
           <hr className="border border-emerald-700" />
-          <div className="flex flex-row gap-2">
-            <p className="text-xl inline">🎤</p>
-            <ul className="text-xl">
-              <li className="line-clamp-1">OpenJS World 2023 - <Link href="https://youtu.be/fih5Yt3UiNg">Advancing Web Runtime Interoperability with WinterCG: Empowering the Future of the Web</Link></li>
-              <li className="line-clamp-1">NodeConf EU 2022 - <Link href="https://youtu.be/Koy8XkDSf30">Making Fetch Happen</Link></li>
-              <li className="line-clamp-1">OpenJS World 2022 - <Link href="https://youtu.be/0hker18pjbM">Making Fetch Happen</Link></li>
-              <li className="line-clamp-1">Node Congress 2022 - <Link href="https://youtu.be/mQ0y3IUMjys">Safely Handling Dynamic Data with TypeScript</Link></li>
-              <li className="line-clamp-1">NodeTLV 2021 - <Link href="https://youtu.be/JDXphHBglQU">Making Fetch Happen</Link></li>
-              <li className="line-clamp-1">OpenJS World 2021 - <Link href="https://youtu.be/y5W3Fm9dpZE">Safely Handling Dynamic Data with TypeScript</Link></li>
-              <li className="line-clamp-1">TypeScript Berlin 2021 - <Link href="https://youtu.be/JKIOMaL8Ets">Advanced TypeScript Definition Patterns with Fastify</Link></li>
-              <li className="line-clamp-1">OpenJS World 2020 - <Link href="https://youtu.be/WjJdJkkriyE">Applying Advanced TypeScript Definition Patterns</Link></li>
-              <li className="line-clamp-1">Node.js Interactive 2019 - <Link href="https://youtu.be/mQUjrstuUgE">Why You Should Maintain Type Definitions for Your JavaScript Project</Link></li>
-              <li className="line-clamp-1">React NYC 2019 - <Link href="https://youtu.be/iOTFnHJvTVw">Contributing to Open Source</Link></li>
-            </ul>
+          <div className="flex flex-col gap-2">
+            <p className="text-xl block">🎤 Recent Talks</p>
+            <div className="w-full m-auto flex flex-col align-center justify-center md:justify-between md:flex-row">
+              {
+                talks.slice(0,3).map(talk => (
+                  <YouTubeEmbed key={talk.id} id={talk.id} />
+                ))
+              }
+            </div>
           </div>
           <hr className="border border-emerald-700" />
           <div className="flex flex-row gap-2 justify-center">
