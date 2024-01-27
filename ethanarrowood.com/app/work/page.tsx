@@ -1,7 +1,7 @@
-import Image, { StaticImageData } from "next/image";
+import GitHubLogo from "./logos/GitHub_Logo.png";
 import MicrosoftLogo from "./logos/microsoft-logo.png";
 import VercelLogo from "./logos/vercel-logotype-dark.png";
-import GitHubLogo from "./logos/GitHub_Logo.png";
+import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 
 interface Experience {
@@ -16,24 +16,20 @@ interface Experience {
   description: string | ReactNode;
 }
 
-const ExperienceSection: React.FC<{ experience: Experience }> = ({
-  experience,
-}) => (
-  <section className="mx-auto flex flex-col w-full gap-y-1 px-1 py-2">
-    <div className="flex flex-col sm:flex-row w-full gap-x-4">
+const ExperienceSection: React.FC<{ experience: Experience }> = ({ experience }) => (
+  <section className="mx-auto flex w-full flex-col gap-y-1 px-1 py-2">
+    <div className="flex w-full flex-col gap-x-4 sm:flex-row">
       <Image
         src={experience.logo.src}
         alt={experience.logo.alt}
-        className="flex-none object-contain w-1/2 sm:w-1/5 h-auto"
+        className="h-auto w-1/2 flex-none object-contain sm:w-1/5"
         placeholder="blur"
       />
-      <div className="flex flex-col w-full justify-between">
+      <div className="flex w-full flex-col justify-between">
         <p className="text-2xl sm:text-3xl">{experience.title}</p>
-        <p className="text-xl sm:text-2xl italic">{experience.team}</p>
+        <p className="text-xl italic sm:text-2xl">{experience.team}</p>
       </div>
-      <p className="sm:text-lg text-gray-500 sm:self-center whitespace-nowrap">
-        {experience.dateRange}
-      </p>
+      <p className="whitespace-nowrap text-gray-500 sm:self-center sm:text-lg">{experience.dateRange}</p>
     </div>
     <div className="text-md sm:text-lg">{experience.description}</div>
   </section>
@@ -56,9 +52,8 @@ export default function Work() {
         dateRange: "2022 ― *",
         description: (
           <p>
-            Core platform engineer developing zero-config experiences for a
-            variety of frameworks, runtimes, products, and more. Notably, a
-            maintainer for the Vercel CLI and the Vercel Azure DevOps Extension.
+            Core platform engineer developing zero-config experiences for a variety of frameworks, runtimes, products,
+            and more. Notably, a maintainer for the Vercel CLI and the Vercel Azure DevOps Extension.
           </p>
         ),
       },
@@ -76,9 +71,8 @@ export default function Work() {
         description: (
           <>
             <p>
-              Developed innovative solutions for Microsoft enterprise
-              partner&apos;s most difficult business challenges. Championed the
-              User Interface Engineering Fundamentals group.
+              Developed innovative solutions for Microsoft enterprise partner&apos;s most difficult business challenges.
+              Championed the User Interface Engineering Fundamentals group.
             </p>
             <p>Notable, public projects include:</p>
             <ul className="ml-8 list-inside list-disc">
@@ -86,19 +80,15 @@ export default function Work() {
                 <strong>
                   <a href="https://www.healthequip.com/">HealthEquip</a>
                 </strong>{" "}
-                - Connecting individuals and organizations who have personal
-                protective equipment (PPE) with the hospitals who need it most.
-                Co-developed with Merit Solutions. Predominantly worked on the
-                Vue web application.
+                - Connecting individuals and organizations who have personal protective equipment (PPE) with the
+                hospitals who need it most. Co-developed with Merit Solutions. Predominantly worked on the Vue web
+                application.
               </li>
               <li>
                 <strong>
-                  <a href="https://github.com/Azure/platform-chaos">
-                    Platform Chaos
-                  </a>
+                  <a href="https://github.com/Azure/platform-chaos">Platform Chaos</a>
                 </strong>{" "}
-                - a Node.js SDK for building services capable of injecting chaos
-                into PaaS offerings.
+                - a Node.js SDK for building services capable of injecting chaos into PaaS offerings.
               </li>
             </ul>
           </>
@@ -116,10 +106,9 @@ export default function Work() {
         description: (
           <>
             <p>
-              Taught students how to use Git and the GitHub platform. Mentored
-              individuals interested in contributing to open source projects.
-              Attended <strong>GitHub Universe 2018</strong> in San Francisco,
-              California on behalf of the program.
+              Taught students how to use Git and the GitHub platform. Mentored individuals interested in contributing to
+              open source projects. Attended <strong>GitHub Universe 2018</strong> in San Francisco, California on
+              behalf of the program.
             </p>
           </>
         ),

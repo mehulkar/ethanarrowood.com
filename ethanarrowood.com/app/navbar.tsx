@@ -1,9 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import clsx from "clsx";
 import { CodeBracketIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -20,33 +19,22 @@ export default function Navbar() {
   return (
     <header>
       <nav
-        className="flex items-center justify-between py-8 text-md border-b-2 border-emerald-700"
-        aria-label="Global"
+        className="flex items-center justify-between border-b-2 border-emerald-700 px-2 py-4 font-semibold text-gray-900"
+        aria-label="Global navigation"
       >
-        <div className="flex flex-1">
-          <div className="flex gap-x-8">
-            {routes.map((route) => {
-              const isActive = pathname === route.href ?? false;
-              return (
-                <Link
-                  key={route.href}
-                  href={route.href}
-                  className={clsx(
-                    "text-md",
-                    "font-semibold",
-                    isActive ? "text-emerald-700" : "text-gray-900",
-                    isActive && "underline"
-                  )}
-                >
-                  {route.text}
-                </Link>
-              );
-            })}
-          </div>
+        <div className="flex flex-1 gap-x-4 ">
+          {routes.map((route) => {
+            const isActive = pathname === route.href;
+            return (
+              <Link key={route.href} href={route.href} className={isActive ? "text-emerald-700 underline" : ""}>
+                {route.text}
+              </Link>
+            );
+          })}
         </div>
-        <div className="flex flex-end">
+        <div className="flex-end flex">
           <span className="text-2xl">
-            <CodeBracketIcon className="w-5 h-5" />
+            <CodeBracketIcon className="h-5 w-5" />
           </span>
         </div>
       </nav>
