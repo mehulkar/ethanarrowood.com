@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./navbar";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Ethan Arrowood",
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
