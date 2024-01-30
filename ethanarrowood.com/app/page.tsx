@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 async function getChessStats() {
-  "use server"
+  "use server";
   const res = await fetch("https://api.chess.com/pub/player/ethanarrowood/stats");
 
   if (!res.ok) {
