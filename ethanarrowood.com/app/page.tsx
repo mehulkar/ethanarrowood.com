@@ -120,7 +120,7 @@ export default async function Home() {
           </span>{" "}
           Talks
         </p>
-        <div className="align-center m-auto flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
+        <div className="align-center m-auto flex flex-row flex-wrap justify-center gap-4">
           {talks.slice(0, 3).map((talk) => (
             <YouTubeEmbed key={talk.id} id={talk.id} />
           ))}
@@ -128,9 +128,9 @@ export default async function Home() {
       </div>
 
       {/* Hobbies */}
-      <div className="flex flex-col sm:justify-center gap-2">
+      <div className="flex flex-col justify-center gap-2">
         {/* Currently Reading */}
-        <div className="flex flex-row gap-2 sm:m-auto">
+        <div className="flex flex-row gap-2 m-auto">
           <p className="inline" role="img" aria-label="stack of books">
             📚
           </p>
@@ -150,7 +150,7 @@ export default async function Home() {
         </div>
 
         {/* Sub-section for better alignment on medium screens */}
-        <div className="flex flex-col sm:flex-row sm:justify-around">
+        <div className="flex flex-row justify-around">
           {/* Chess */}
           <div className="flex flex-row gap-2">
             <p className="inline" role="img" aria-label="chess piece (pawn)">
