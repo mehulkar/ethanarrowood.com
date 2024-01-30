@@ -35,19 +35,19 @@ export default async function Home() {
         </span>
       </div>
 
-      <div className="flex flex-col gap-4 md:flex-row pb-4 border-b-2 border-emerald-700">
+      <div className="flex flex-col gap-4 sm:flex-row pb-4 border-b-2 border-emerald-700">
         {/* Headshot */}
         {/* Default: should render an image of me as 2/3 the width of the page and centered */}
         <Image
           src={NodeConfEUImage}
           alt="Picture of me giving a talk at Node Conf EU"
-          className="block m-auto w-2/3 rounded-xl md:m-0 md:w-1/3 md:inline"
+          className="block m-auto w-2/3 rounded-xl sm:m-0 sm:w-1/3 sm:inline"
           placeholder="blur"
         />
 
         {/* Highlights */}
         {/* Default: should render as a vertical list of text. Each item on its own line. */}
-        <div className="flex flex-col gap-2 ">
+        <div className="flex flex-col gap-2">
           <div className="flex flex-row gap-2">
             <p className="inline" role="img" aria-label="laptop">
               💻
@@ -120,7 +120,7 @@ export default async function Home() {
           </span>{" "}
           Talks
         </p>
-        <div className="align-center m-auto flex flex-col md:flex-row md:flex-wrap justify-center gap-4">
+        <div className="align-center m-auto flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
           {talks.slice(0, 3).map((talk) => (
             <YouTubeEmbed key={talk.id} id={talk.id} />
           ))}
@@ -128,9 +128,9 @@ export default async function Home() {
       </div>
 
       {/* Hobbies */}
-      <div className="flex flex-col md:justify-center gap-2">
+      <div className="flex flex-col sm:justify-center gap-2">
         {/* Currently Reading */}
-        <div className="flex flex-row gap-2 md:m-auto">
+        <div className="flex flex-row gap-2 sm:m-auto">
           <p className="inline" role="img" aria-label="stack of books">
             📚
           </p>
@@ -150,7 +150,7 @@ export default async function Home() {
         </div>
 
         {/* Sub-section for better alignment on medium screens */}
-        <div className="flex flex-col md:flex-row md:justify-around">
+        <div className="flex flex-col sm:flex-row sm:justify-around">
           {/* Chess */}
           <div className="flex flex-row gap-2">
             <p className="inline" role="img" aria-label="chess piece (pawn)">
