@@ -22,8 +22,6 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-4">
       {/* Introduction */}
-      {/* Default: should render text above centered line */}
-      {/* md: should render text and line on same line */}
       <div>
         <span className="block md:inline">
           <span role="img" aria-label="hand waving">
@@ -38,7 +36,6 @@ export default async function Home() {
 
       <div className="flex flex-col gap-4 sm:flex-row pb-4 border-b-2 border-emerald-700">
         {/* Headshot */}
-        {/* Default: should render an image of me as 2/3 the width of the page and centered */}
         <Image
           src={NodeConfEUImage}
           alt="Picture of me giving a talk at Node Conf EU"
@@ -47,7 +44,6 @@ export default async function Home() {
         />
 
         {/* Highlights */}
-        {/* Default: should render as a vertical list of text. Each item on its own line. */}
         <div className="flex flex-col gap-2">
           <div className="flex flex-row gap-2">
             <p className="inline" role="img" aria-label="laptop">
