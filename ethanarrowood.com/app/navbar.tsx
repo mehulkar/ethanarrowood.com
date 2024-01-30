@@ -34,7 +34,9 @@ export default function Navbar() {
         </div>
         <div className="flex-end flex">
           <span className="text-2xl">
-            <CodeBracketIcon className="h-5 w-5" />
+            <Link href="https://github.com/ethan-arrowood/ethanarrowood.com" target="_blank">
+              <CodeBracketIcon className="h-5 w-5" />
+            </Link>
           </span>
         </div>
       </nav>

@@ -54,42 +54,42 @@ export default async function Home() {
             </p>
             <ul className="min-w-0">
               <li>
-                <Link className="underline" href="https://vercel.com">
+                <Link className="underline" href="https://vercel.com" target="_blank">
                   Vercel
                 </Link>{" "}
                 Senior Software Engineer
               </li>
               <li>
-                <Link className="underline" href="https://nodejs.org">
+                <Link className="underline" href="https://nodejs.org" target="_blank">
                   Node.js
                 </Link>{" "}
                 Contributor
               </li>
               <li>
-                <Link className="underline" href="https://github.com/nodejs/undici/">
+                <Link className="underline" href="https://github.com/nodejs/undici/" target="_blank">
                   Undici
                 </Link>{" "}
                 Maintainer
               </li>
               <li>
-                <Link className="underline" href="https://tc39.es">
+                <Link className="underline" href="https://tc39.es" target="_blank">
                   ECMA TC39
                 </Link>{" "}
                 Delegate
               </li>
               <li>
-                <Link className="underline" href="https://openjsf.org">
+                <Link className="underline" href="https://openjsf.org" target="_blank">
                   OpenJS
                 </Link>{" "}
                 &{" "}
-                <Link className="underline" href="https://wintercg.org">
+                <Link className="underline" href="https://wintercg.org" target="_blank">
                   WinterCG
                 </Link>{" "}
                 Collaborator
               </li>
               <li className="whitespace-nowrap text-ellipsis overflow-hidden">
                 Developing{" "}
-                <Link className="underline" href="https://github.com/Ethan-Arrowood/mddl">
+                <Link className="underline" href="https://github.com/Ethan-Arrowood/mddl" target="_blank">
                   mddl
                 </Link>{" "}
                 <span className="text-sm">(markdown documentation language)</span>
@@ -140,7 +140,7 @@ export default async function Home() {
               .filter((book) => book.shelf === "currently-reading")
               .map((book) => (
                 <li className="whitespace-nowrap text-ellipsis overflow-hidden" key={book.title}>
-                  <Link className="underline" href={book.goodreads_link}>
+                  <Link className="underline" href={book.goodreads_link} target="_blank">
                     {book.title}
                   </Link>{" "}
                   - <span className="italic text-sm">{book.author}</span>
@@ -158,7 +158,7 @@ export default async function Home() {
             </p>
             <ul>
               <li>
-                <Link className="underline" href="https://www.chess.com/member/ethanarrowood">
+                <Link className="underline" href="https://www.chess.com/member/ethanarrowood" target="_blank">
                   chess.com
                 </Link>{" "}
                 Stats
