@@ -1,7 +1,7 @@
-import GitHubLogo from "./logos/GitHub_Logo.png";
-import MicrosoftLogo from "./logos/microsoft-logo.png";
 import VercelLogo from "./logos/vercel-logotype-dark.png";
+import MicrosoftLogo from "./logos/microsoft-logo.png";
 import Image, { StaticImageData } from "next/image";
+import GitHubLogo from "./logos/GitHub_Logo.png";
 import { ReactNode } from "react";
 
 interface Experience {

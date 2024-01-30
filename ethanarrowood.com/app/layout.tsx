@@ -1,9 +1,9 @@
-import Footer from "./footer";
-import "./globals.css";
-import Navbar from "./navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import Footer from "./footer";
+import Navbar from "./navbar";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ethan Arrowood",

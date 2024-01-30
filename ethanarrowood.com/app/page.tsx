@@ -1,7 +1,7 @@
-import books from "./books/books.json";
 import { YouTubeEmbed } from "./components/YouTubeEmbed";
-import talks from "./talks/talks.json";
 import NodeConfEUImage from "@/images/node_conf_eu.jpg";
+import books from "./books/books.json";
+import talks from "./talks/talks.json";
 import Image from "next/image";
 import Link from "next/link";
 
