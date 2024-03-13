@@ -1,0 +1,27 @@
+[
+    {
+        "type": "education",
+        "name": "Wentworth Institute of Technology",
+        "location": "Boston, Massachusetts, USA",
+        "startDate": "2016",
+        "endDate": "2019",
+        "details": {
+            "degree": "Bachelors of Science in Computer Science",
+            "gpa": "3.67",
+            "achievements": [
+                {
+                    "name": "Presidential Award for Academic Excellence and Co-Curricular Involvement",
+                    "description": "This annual award is granted to an individual student from each academic major. It recognizes not just excellence in the classroom, but also professional achievement and extra-curricular leadership."
+                },
+                {
+                    "name": "Dean's List",
+                    "description": "Maintained status for all full-time semesters demonstrating continuous academic distinction"
+                },
+                {
+                    "name": "Phi Sigma Pi (ΦΣΠ)",
+                    "description": "General and executive leadership member of the gender-inclusive, national honors fraternity that"
+                }
+            ]
+        }
+    }
+]

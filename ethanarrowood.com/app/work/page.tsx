@@ -48,8 +48,25 @@ export default function Work() {
           alt: "Dark Vercel Logo",
         },
         title: "Senior Software Engineer",
+        team: "Team Next.js",
+        dateRange: "Jan 2024 ― *",
+        description: (
+          <p>
+            Cross-product engineer focussed on improving the overall performance and stability of the Next.js framework and Vercel development toolkit.
+          </p>
+        ),
+      },
+    ],
+    previous: [
+      {
+        name: "vercel",
+        logo: {
+          src: VercelLogo,
+          alt: "Dark Vercel Logo",
+        },
+        title: "Senior Software Engineer",
         team: "Team Zero-Config",
-        dateRange: "2022 ― *",
+        dateRange: "Feb 2022 ― Jan 2024",
         description: (
           <p>
             Core platform engineer developing zero-config experiences for a variety of frameworks, runtimes, products,
@@ -57,8 +74,6 @@ export default function Work() {
           </p>
         ),
       },
-    ],
-    previous: [
       {
         name: "microsoft",
         logo: {
