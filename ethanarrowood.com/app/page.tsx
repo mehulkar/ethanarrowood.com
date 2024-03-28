@@ -2,23 +2,38 @@ import { YouTubeEmbed } from "./components/YouTubeEmbed";
 import NodeConfEUImage from "@/images/node_conf_eu.jpg";
 import books from "./books/books.json";
 import talks from "./talks/talks.json";
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-async function getChessStats() {
-  "use server";
-  const res = await fetch("https://api.chess.com/pub/player/ethanarrowood/stats");
+const getChessStats = async () => {
+  const res = await fetch("https://api.chess.com/pub/player/ethanarrowood/stats", { next: { revalidate: 30 } });
 
   if (!res.ok) {
     return null;
   }
 
   return res.json();
+};
+
+async function ChessStats({ shell = false }) {
+  let chessStats: any;
+
+  if (!shell) {
+    chessStats = await getChessStats();
+  }
+
+  return (
+    <>
+      <li>Rapid: {chessStats?.chess_rapid.last.rating ?? "~1200"}</li>
+      <li>Blitz: {chessStats?.chess_blitz.last.rating ?? "~900"}</li>
+      <li>Daily: {chessStats?.chess_daily.last.rating ?? "~1000"}</li>
+      <li>Bullet: {chessStats?.chess_bullet.last.rating ?? "~900"}</li>
+    </>
+  );
 }
 
-export default async function Home() {
-  const chessStats = await getChessStats();
-
+export default function Home() {
   return (
     <div className="flex flex-col gap-4">
       {/* Introduction */}
@@ -160,10 +175,9 @@ export default async function Home() {
                 </Link>{" "}
                 Stats
               </li>
-              <li>Rapid: {chessStats?.chess_rapid.last.rating ?? "~1200"}</li>
-              <li>Blitz: {chessStats?.chess_blitz.last.rating ?? "~700"}</li>
-              <li>Daily: {chessStats?.chess_daily.last.rating ?? "~900"}</li>
-              <li>Bullet: {chessStats?.chess_bullet.last.rating ?? "~900"}</li>
+              <Suspense fallback={<ChessStats shell />}>
+                <ChessStats />
+              </Suspense>
             </ul>
           </div>
 
