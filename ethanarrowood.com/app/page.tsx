@@ -1,5 +1,5 @@
 import { YouTubeEmbed } from "./components/YouTubeEmbed";
-import NodeConfEUImage from "@/images/node_conf_eu.jpg";
+import MountainTopImage from "@/images/mountain-top.jpg";
 import books from "./books/books.json";
 import talks from "./talks/talks.json";
 import { Suspense } from "react";
@@ -28,7 +28,7 @@ async function ChessStats({ shell = false }) {
       <li>Rapid: {chessStats?.chess_rapid.last.rating ?? "~1200"}</li>
       <li>Blitz: {chessStats?.chess_blitz.last.rating ?? "~900"}</li>
       <li>Daily: {chessStats?.chess_daily.last.rating ?? "~1000"}</li>
-      <li>Bullet: {chessStats?.chess_bullet.last.rating ?? "~900"}</li>
+      <li>Bullet: {chessStats?.chess_bullet.last.rating ?? "~700"}</li>
     </>
   );
 }
@@ -38,13 +38,13 @@ export default function Home() {
     <div className="flex flex-col gap-4">
       {/* Introduction */}
       <div>
-        <span className="block md:inline">
+        <span className="block sm:inline">
           <span role="img" aria-label="hand waving">
             👋
           </span>{" "}
           I&apos;m <h1 className="inline text-lg text-emerald-700">Ethan Arrowood</h1>, here are my highlights...
         </span>
-        <span aria-hidden className="block md:inline text-center md:float-right text-emerald-700">
+        <span aria-hidden className="block sm:inline text-center sm:float-right text-emerald-700">
           ━━━━━━
         </span>
       </div>
@@ -52,7 +52,7 @@ export default function Home() {
       <div className="flex flex-col gap-4 sm:flex-row pb-4 border-b-2 border-emerald-700">
         {/* Headshot */}
         <Image
-          src={NodeConfEUImage}
+          src={MountainTopImage}
           alt="Picture of me giving a talk at Node Conf EU"
           className="block m-auto w-2/3 rounded-xl sm:m-0 sm:w-1/3 sm:inline"
           placeholder="blur"
