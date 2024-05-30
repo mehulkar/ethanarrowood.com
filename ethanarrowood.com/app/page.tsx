@@ -1,7 +1,9 @@
 import { YouTubeEmbed } from "./components/YouTubeEmbed";
 import MountainTopImage from "@/images/mountain-top.jpg";
+import { Timeline } from "./components/Timeline";
 import books from "./books/books.json";
 import talks from "./talks/talks.json";
+import work from "./work/work.json";
 import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -54,7 +56,7 @@ export default function Home() {
         <Image
           src={MountainTopImage}
           alt="Picture of me giving a talk at Node Conf EU"
-          className="block m-auto w-2/3 rounded-xl sm:m-0 sm:w-1/3 sm:inline"
+          className="block m-auto w-2/3 rounded-xl sm:m-0 sm:w-1/3 sm:inline object-cover"
           placeholder="blur"
         />
 
@@ -137,6 +139,16 @@ export default function Home() {
             <YouTubeEmbed key={talk.id} id={talk.id} />
           ))}
         </div>
+      </div>
+
+      <div className="flex flex-col gap-2 pb-4 border-b-2 border-emerald-700">
+        <p>
+          <span role="img" aria-label="Man behind laptop">
+            👨‍💻
+          </span>{" "}
+          Experience
+        </p>
+        <Timeline events={work} />
       </div>
 
       {/* Hobbies */}

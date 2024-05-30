@@ -11,10 +11,6 @@ export default function Navbar() {
       text: "home",
       href: "/",
     },
-    {
-      text: "work",
-      href: "/work",
-    },
   ];
   return (
     <header>
